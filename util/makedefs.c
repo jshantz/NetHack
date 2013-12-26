@@ -543,7 +543,11 @@ const char *build_date;
 void
 do_date()
 {
+#ifdef KR1ED
 	long clocktim = 0;
+#else
+	time_t clocktim;
+#endif
 	char *c, cbuf[60], buf[BUFSZ];
 	const char *ul_sfx;
 

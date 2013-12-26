@@ -3,7 +3,9 @@
 
 // winhack.cpp : Defines the entry point for the application.
 //
-
+#if _MSC_VER >= 1300
+#pragma warning(disable:4142)
+#endif
 #include <process.h>
 #include "winMS.h"
 #include "hack.h"

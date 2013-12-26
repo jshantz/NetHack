@@ -1984,7 +1984,14 @@ register char *cmd;
 		} else if (*cmd & 0200) {
 		    *cp++ = 'M';
 		    *cp++ = '-';
+#if _MSC_VER == 1600
+#pragma warning(push)
+#pragma warning(disable:4244)
+#endif
 		    *cp++ = *cmd++ &= ~0200;
+#if _MSC_VER == 1600
+#pragma warning(pop)
+#endif
 		} else {
 		    *cp++ = '^';
 		    *cp++ = *cmd++ ^ 0100;
