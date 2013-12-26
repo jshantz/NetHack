@@ -14,6 +14,7 @@
     <SccProjectName />
     <SccLocalPath />
     <Keyword>MakeFileProj</Keyword>
+    <ProjectGuid>{90A4A045-BBBF-10B2-8033-5E1719B38E01}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -38,7 +39,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release\</OutDir>
-    <IntDir>.\Release\</IntDir>
+    <IntDir>.\$(ProjectName)\$(Configuration)\</IntDir>
     <NMakeBuildCommandLine>nmake /f "tiles.mak"</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>nmake /f "tiles.mak" /a</NMakeReBuildCommandLine>
     <NMakeOutput>..\win\win32\tiles.bmp</NMakeOutput>
@@ -46,7 +47,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>.\Debug\</OutDir>
-    <IntDir>.\Debug\</IntDir>
+    <IntDir>.\$(ProjectName)\$(Configuration)\</IntDir>
     <NMakeBuildCommandLine>nmake /f "tiles.mak"</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>nmake /f "tiles.mak" /a</NMakeReBuildCommandLine>
     <NMakeOutput>..\win\win32\tiles.bmp</NMakeOutput>
